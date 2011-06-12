@@ -1,0 +1,11 @@
+--- origsrc/raptor2-2.0.3/src/Makefile.am	2011-05-22 16:34:41.000000000 -0500
++++ src/raptor2-2.0.3/src/Makefile.am	2011-06-11 23:52:12.627455300 -0500
+@@ -180,7 +180,7 @@ AM_CPPFLAGS += -DLIBRDFA_IN_RAPTOR -I$(t
+ endif
+ 
+ libraptor2_la_LDFLAGS = -version-info @RAPTOR_LIBTOOL_VERSION@ \
+-@RAPTOR_LDFLAGS@ $(MEM_LIBS)
++-no-undefined @RAPTOR_LDFLAGS@ $(MEM_LIBS)
+ libraptor2_la_LIBADD = @LTLIBOBJS@
+ 
+ 

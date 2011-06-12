@@ -1,0 +1,21 @@
+inherit gnome2  # for gtk-doc
+
+DESCRIPTION="RDF parser library"
+HOMEPAGE="http://librdf.org/raptor/"
+SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
+
+PATCH_URI="2.0.3-no-undefined.patch
+           2.0.3-parallel-docs.patch
+           2.0.3-vpath.patch"
+
+PKG_NAMES="${PN} lib${PN}_0 lib${PN}-devel"
+raptor2_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/man1/"
+libraptor2_0_CONTENTS="usr/bin/cygraptor2-0.dll"
+libraptor2_devel_CONTENTS="usr/include/ usr/lib/ usr/share/gtk-doc/ usr/share/man/man3"
+
+DIFF_EXCLUDES="raptor-fake.i"
+
+CYGCONF_ARGS="
+	--with-www=curl
+	--with-xml-parser=libxml
+"

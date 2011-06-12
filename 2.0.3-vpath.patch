@@ -1,0 +1,13 @@
+--- origsrc/raptor2-2.0.3/docs/Makefile.am	2011-04-26 13:42:05.000000000 -0500
++++ src/raptor2-2.0.3/docs/Makefile.am	2011-06-12 00:34:52.544888400 -0500
+@@ -149,7 +149,7 @@ $(top_builddir)/scripts/build-formats:
+ upgrade-script.pl: $(srcdir)/../scripts/process-changes.pl $(srcdir)/raptor-1-to-2-map.tsv
+ 	$(PERL) $(srcdir)/../scripts/process-changes.pl --upgrade-script $@ $(PACKAGE) $(srcdir)/raptor-1-to-2-map.tsv
+ 
+-raptor-fake.i: $(top_srcdir)/src/raptor2.h $(srcdir)/../scripts/fix-gtkdoc-header.pl
+-	$(PERL) $(srcdir)/../scripts/fix-gtkdoc-header.pl < $< > $@
+-
+ endif
++
++$(srcdir)/raptor-fake.i: $(top_builddir)/src/raptor2.h $(srcdir)/../scripts/fix-gtkdoc-header.pl
++	$(PERL) $(srcdir)/../scripts/fix-gtkdoc-header.pl < $< > $@
