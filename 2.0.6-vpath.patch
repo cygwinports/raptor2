@@ -1,0 +1,11 @@
+--- origsrc/raptor2-2.0.6/docs/Makefile.am	2011-11-27 13:29:57.000000000 -0600
++++ src/raptor2-2.0.6/docs/Makefile.am	2011-11-29 02:40:22.202174200 -0600
+@@ -121,7 +121,7 @@ upgrade-script.pl
+ DISTCLEANFILES+= \
+ raptor-fake.h
+ 
+-$(builddir)/raptor-fake.h: $(top_srcdir)/src/raptor2.h $(srcdir)/../scripts/fix-gtkdoc-header.pl
++$(builddir)/raptor-fake.h: $(top_builddir)/src/raptor2.h $(srcdir)/../scripts/fix-gtkdoc-header.pl
+ 	$(PERL) $(srcdir)/../scripts/fix-gtkdoc-header.pl < $< > $@
+ 
+ if MAINTAINER_MODE

@@ -5,8 +5,7 @@ HOMEPAGE="http://librdf.org/raptor/"
 SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 PATCH_URI="2.0.3-no-undefined.patch
-           2.0.3-parallel-docs.patch
-           2.0.3-vpath.patch"
+           2.0.6-vpath.patch"
 
 PKG_NAMES="${PN} lib${PN}_0 lib${PN}-devel"
 raptor2_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/man1/"
