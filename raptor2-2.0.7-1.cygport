@@ -5,6 +5,7 @@ HOMEPAGE="http://librdf.org/raptor/"
 SRC_URI="http://download.librdf.org/source/${P}.tar.gz"
 
 PATCH_URI="2.0.3-no-undefined.patch
+           2.0.7-automake-1_11_1.patch
            2.0.6-vpath.patch"
 
 PKG_NAMES="${PN} lib${PN}_0 lib${PN}-devel"
