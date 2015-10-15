@@ -1,9 +1,9 @@
 inherit gnome2  # for gtk-doc
 
 NAME="raptor2"
-VERSION=2.0.14
+VERSION=2.0.15
 RELEASE=1
-CATEGORY="Text"
+CATEGORY="Libs"
 SUMMARY="RDF parser library"
 DESCRIPTION="Raptor is a free software / Open Source C library that provides
 a set of parsers and serializers that generate Resource Description Framework
@@ -14,17 +14,19 @@ HTML, XHTML and XML and RDFa. The serializing syntaxes are RDF/XML (regular,
 and abbreviated), Atom 1.0, GraphViz, JSON, N-Triples, RSS 1.0 and XMP."
 HOMEPAGE="http://librdf.org/raptor/"
 SRC_URI="http://download.librdf.org/source/${NAME}-${VERSION}.tar.gz"
-
-PATCH_URI="2.0.3-no-undefined.patch
-           2.0.7-automake-1_11_1.patch"
+PATCH_URI="
+	2.0.3-no-undefined.patch
+	2.0.7-automake-1_11_1.patch
+	2.0.15-sort_r.patch
+"
 
 PKG_NAMES="${NAME} lib${NAME}_0 lib${NAME}-devel lib${NAME}-doc"
+raptor2_CATEGORY="Text"
 raptor2_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/man/man1/"
 libraptor2_0_CONTENTS="usr/bin/cygraptor2-0.dll"
 libraptor2_devel_CONTENTS="usr/include/ usr/lib/"
 libraptor2_doc_CATEGORY="Doc"
 libraptor2_doc_CONTENTS="usr/share/gtk-doc/ usr/share/man/man3/"
-
 
 DIFF_EXCLUDES="raptor-fake.i"
 
